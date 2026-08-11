@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  border-color: #232C38;
+}
+
+html,
+body {
+  background-color: #0D1117;
+  color: #E6E8EB;
+}
+
+body {
+  background-image: radial-gradient(circle at 1px 1px, rgba(230,232,235,0.035) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+::selection {
+  background-color: #D4A24C;
+  color: #0D1117;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #232C38;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2E3846;
+}
+
+/* Ledger tear-line: a dashed perforation used under card headers */
+.tear-line {
+  background-image: repeating-linear-gradient(
+    to right,
+    #2A3441 0,
+    #2A3441 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  height: 1px;
+}
+
+/* Visible keyboard focus ring, consistent across interactive elements */
+:focus-visible {
+  outline: 2px solid #D4A24C;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
